@@ -42,7 +42,6 @@ const Characters = () => {
       })
       .catch((error) => {
         console.log("Error:", error);
-        // Mostrar un mensaje de error o tomar alguna acción adicional
       });
   }, []);
 
