@@ -11,7 +11,7 @@ const endpoint = "/characters";
 const generateHash = (timestamp: number) => {
   const hash = require("crypto")
     .createHash("md5")
-    .update(timestamp + (privateKey ? privateKey : "") + publicKey)
+    .update(timestamp + privateKey! + publicKey)
     .digest("hex");
   return hash;
 };
