@@ -35,7 +35,7 @@ export const Progress = ({ meta, metaAlcanzada }: propsProgress) => {
     const lines = [];
     for (let i = 1; i <= lineCount; i++) {
       const linePosition = (100 / lineCount) * i;
-      const lineStyle = {
+      const lineStyle: any = {
         top: "6px",
         left: `calc(${linePosition}% - 4px)`,
         width: "1px",

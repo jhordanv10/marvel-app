@@ -8,20 +8,22 @@ const privateKey = process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY;
 const baseUrl = "https://gateway.marvel.com/v1/public";
 const endpoint = "/characters";
 
+const generateHash = (timestamp: number) => {
+  const hash = require("crypto")
+    .createHash("md5")
+    .update(timestamp + (privateKey ? privateKey : "") + publicKey)
+    .digest("hex");
+  return hash;
+};
+
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     // Crea un timestamp para la solicitud
     const timestamp = new Date().getTime();
-
-    // Genera un hash usando el timestamp y tus claves
-    const hash = require("crypto")
-      .createHash("md5")
-      .update(timestamp + (privateKey ? privateKey : "") + publicKey)
-      .digest("hex");
+    const hash = generateHash(timestamp);
 
     // Realiza la solicitud Fetch con Axios
     axios
@@ -34,11 +36,13 @@ const Characters = () => {
         },
       })
       .then((response) => {
-        setCharacters(response.data.data.results);
+        const { results } = response.data.data;
+        setCharacters(results);
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        console.log("Error:", error);
+        // Mostrar un mensaje de error o tomar alguna acción adicional
       });
   }, []);
 

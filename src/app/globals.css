@@ -33,15 +33,6 @@
     format("truetype");
 }
 
-@font-face {
-  font-family: "Spiegal-Regular";
-  src: url("../assets/fonts/spiegal/Spiegel-Regular.otf") format("truetype");
-}
-
-.text {
-  font-family: "Spiegal-Regular";
-}
-
 body {
   margin: 0px;
   background: radial-gradient(

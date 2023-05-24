@@ -21,6 +21,7 @@ export const CardInfo = ({ item }: CardInfoProps) => {
     >
       {item.type === "image" ? (
         <Image
+          priority
           src="https://i.pinimg.com/564x/12/28/0a/12280a45af955f87462ec57aa9087ddb.jpg"
           alt="posterMarvel"
           className=" object-cover p-0 w-full h-[inherit] rounded-md "
