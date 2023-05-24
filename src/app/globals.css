@@ -16,15 +16,43 @@
   }
 }
 
+@font-face {
+  font-family: "BeaufortforLOL-Regular";
+  src: url("../assets/fonts/beaufort-for-lol/BeaufortforLOL-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "BeaufortforLOL-Italic";
+  src: url("../assets/fonts/beaufort-for-lol/BeaufortforLOL-Italic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "BeaufortforLOL-Bold";
+  src: url("../assets/fonts/beaufort-for-lol/BeaufortforLOL-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Spiegal-Regular";
+  src: url("../assets/fonts/spiegal/Spiegel-Regular.otf") format("truetype");
+}
+
+.text {
+  font-family: "Spiegal-Regular";
+}
+
 body {
   margin: 0px;
-
   background: radial-gradient(
     82.53% 82.53% at 50% 91.99%,
     #19488f 44.09%,
     #000000 100%
   );
   /* Dorado 3 */
+  overflow: scroll;
+  height: 100%;
+  font-family: "BeaufortforLOL-Regular";
 }
 body::after {
   z-index: -2;
@@ -34,11 +62,25 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/background.svg");
+  background-image: url("../assets/images/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
   opacity: 0.5;
   mix-blend-mode: multiply;
+  /* background-repeat: no-repeat; */
+}
+
+.spinner {
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

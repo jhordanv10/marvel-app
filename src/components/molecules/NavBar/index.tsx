@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import iconActive from "@assets/LinkActive.svg";
+import iconActive from "@assets/images/LinkActive.svg";
 import Image from "next/image";
 
 export const NavBar = () => {
@@ -20,8 +20,6 @@ export const NavBar = () => {
 
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <nav className="h-full">
       <ul className="flex justify-center items-center h-full">
@@ -30,13 +28,13 @@ export const NavBar = () => {
             key={index}
             className={`${
               route.path === pathname
-                ? " bg-gradient-link text-golden-2"
+                ? " bg-gradient-link text-golden-3"
                 : "bg-transparent text-golden-1"
             }   h-full flex justify-center items-center`}
           >
             <Link
               href={route.path}
-              className=" text-sm h-full flex justify-center items-center   ease-in-out transition-all duration-300 cursor-pointer min-w-100  px-3 sm:px-4 sm:min-w-120 lg:px-6"
+              className="tracking-[2px] shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] text-sm h-full flex justify-center items-center   ease-in-out transition-all duration-300 cursor-pointer min-w-100  px-3 sm:px-4 sm:min-w-120 lg:px-6"
             >
               {route.name.toUpperCase()}
               {route.path === pathname ? (
