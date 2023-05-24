@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { SectionInfo, SectionCards, Loading } from "@/components";
+import { SectionInfo, SectionCards, Loading } from "@/components/index";
 
 const publicKey = process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY;
 const privateKey = process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY;
