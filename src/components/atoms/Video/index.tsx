@@ -36,7 +36,7 @@ export const Video = () => {
   };
 
   return (
-    <div className="relative xl:overflow-hidden xl:pt-[56.25%] w-full h-full rounded-md">
+    <div className="relative xl:overflow-hidden xl:padding-video w-full h-full rounded-md">
       <iframe
         src={`https://www.youtube.com/embed/${videoId}`}
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

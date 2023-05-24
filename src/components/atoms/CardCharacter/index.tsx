@@ -37,13 +37,15 @@ export const CardCharacter = ({ character }: CardCharacterProps) => {
   return (
     <div
       onClick={() => handleClick(character)}
-      className="hover:shadow-cardHover ease-in-out transition-all duration-300  cursor-pointer box-border text-white bg-gradient-card  opacity-80 rounded-md py-10 px-4 w-[248px] h-[448px] border border-gray-3 "
+      style={{ width: "248px", height: "448px" }}
+      className="hover:shadow-cardHover ease-in-out transition-all duration-300  cursor-pointer box-border text-white bg-gradient-card  opacity-80 rounded-md py-10 px-4  border border-gray-3 "
     >
       <div className="relative">
         <Image
           src={iconsCard}
           alt="Card1"
-          className="absolute top-1.5 left-[18px]"
+          className="absolute top-1.5"
+          style={{ left: "18px" }}
         />
         <h2 className=" text-golden-1 text-xs uppercase text-center max-w-80 mx-auto min-h-45">
           {character.name}
@@ -55,11 +57,19 @@ export const CardCharacter = ({ character }: CardCharacterProps) => {
           alt="circleCard"
           className="mx-auto my-4 hover:rotate-90 ease-in-out transition-all duration-700"
         />
-        <div className="absolute top-[28%] left-0 right-0">
-          <div className="mx-auto w-[85px] h-[85px]">
+        <div className="absolute left-0 right-0">
+          <div
+            style={{ width: "85px", height: "85px", top: "28%" }}
+            className="mx-auto"
+          >
             <div
-              className="relative w-full h-full transform scale-150 rounded-[40px] overflow-hidden"
-              style={{ maxWidth: "100%", maxHeight: "100%" }}
+              className="relative w-full h-full scale-150 overflow-hidden "
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                borderRadius: "40px",
+                bottom: "154px",
+              }}
             >
               <Image
                 src={`${character.thumbnail.path}.${character.thumbnail.extension}`}

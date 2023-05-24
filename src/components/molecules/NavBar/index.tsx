@@ -34,7 +34,7 @@ export const NavBar = () => {
           >
             <Link
               href={route.path}
-              className="tracking-[2px] shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)] text-sm h-full flex justify-center items-center   ease-in-out transition-all duration-300 cursor-pointer min-w-100  px-3 sm:px-4 sm:min-w-120 lg:px-6"
+              className="tracking-2 shadow-link text-sm h-full flex justify-center items-center   ease-in-out transition-all duration-300 cursor-pointer min-w-100  px-3 sm:px-4 sm:min-w-120 lg:px-6"
             >
               {route.name.toUpperCase()}
               {route.path === pathname ? (

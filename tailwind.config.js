@@ -31,9 +31,9 @@ module.exports = {
         "gradient-link":
           "linear-gradient(0deg, #231f20 0%, rgba(34, 34, 34, 0) 100%)",
         "gradient-card":
-          "linear-gradient(360deg, #090C14 0%, #171A20 36.49%, #272C34 114.84%);",
+          "linear-gradient(360deg, #090C14 0%, #171A20 36.49%, #272C34 114.84%)",
         "progress-bar":
-          "linear-gradient(180deg, #31969D 0%, #65E6F4 31.77%, #24AEBD 66.15%, #1299A8 98.96%);",
+          "linear-gradient(180deg, #31969D 0%, #65E6F4 31.77%, #24AEBD 66.15%, #1299A8 98.96%)",
       },
       height: {
         header: "116px",
@@ -59,8 +59,15 @@ module.exports = {
       },
       boxShadow: {
         linearBar:
-          "0px 0px 4px #FFA942, 0px 0px 4px rgba(255, 169, 66, 0.25), 0px 0px 7px rgba(255, 169, 66, 0.25);",
-        cardHover: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+          "0px 0px 4px #FFA942, 0px 0px 4px rgba(255, 169, 66, 0.25), 0px 0px 7px rgba(255, 169, 66, 0.25)",
+        cardHover: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        link: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+      },
+      letterSpacing: {
+        2: "2px",
+      },
+      skew: {
+        18: "-18deg",
       },
     },
     screens: {

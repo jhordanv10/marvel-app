@@ -40,7 +40,6 @@ body {
     #19488f 44.09%,
     #000000 100%
   );
-  /* Dorado 3 */
   overflow: scroll;
   height: 100%;
   font-family: "BeaufortforLOL-Regular";
@@ -60,7 +59,10 @@ body::after {
   z-index: -1;
   opacity: 0.5;
   mix-blend-mode: multiply;
-  /* background-repeat: no-repeat; */
+}
+
+.padding-video {
+  padding-top: 56.25%;
 }
 
 .spinner {

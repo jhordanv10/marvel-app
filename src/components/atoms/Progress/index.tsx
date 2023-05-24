@@ -58,7 +58,7 @@ export const Progress = ({ meta, metaAlcanzada }: propsProgress) => {
           <br />
           Meta de producción
         </span>
-        <div className="w-full h-7 bg-gray-4 my-2 shadow-linearBar skew-x-[-18deg] rotate-180 ">
+        <div className="w-full h-7 bg-gray-4 my-2 shadow-linearBar skew-x-18 rotate-180 ">
           <div
             className="h-full bg-gray-3 p-1 relative "
             style={{ width: "100%" }}
